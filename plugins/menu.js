@@ -34,7 +34,7 @@ let tags = {
 const defaultMenu = {
   before: `
 
-🙏🏻 Namaste %name, how can i help you?
+🙏🏻 ram ram 🙏 kese ho %name, how can i help you?
 
 🪵 Left: *%limit Limit*
 🎗️ Role: *%role*
@@ -43,7 +43,8 @@ const defaultMenu = {
 
 〽️ Prefix: *%p*
 📅 Date: *%week, %date*
-💠 Github: github.com/itsajaygaur/tokio-wabot
+💠 Github: nhi de rha jo karna so kar le 😏
+🌝 creator: Aman pal
 
 👇🏻 All usable commands are listed below 
 
@@ -51,7 +52,7 @@ const defaultMenu = {
   header: '        *━━❰･%category･❱━━*',
   body: ' 🌠 %cmd %islimit %isPremium',
   footer: ' ',
-  after: `🌟 *Hope you're enjoying bot, have a great day* 
+  after: `♥️ *Hope you're enjoying bot, have a great day* 
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p }) => {
@@ -150,7 +151,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    conn.send2ButtonImg(m.chat, thumb, `🏮 I\'m ${conn.user.name}`, text.trim(), 'owner', `${_p}owner`, 'rules', `${_p}rules`, m)
+    conn.send2ButtonImg(m.chat, thumb, `🌝 I\'m ${conn.user.name}`, text.trim(), 'owner', `${_p}owner`, 'rules', `${_p}rules`, m)
   } catch (e) {
     conn.reply(m.chat, 'Sorry, the menu is in error', m)
     throw e
